@@ -35,8 +35,7 @@ def deploy_token_farm():
     return token_farm, dapp_token
 
 
-# track the file
-# looping through dictionary and calling contract functions to add tokens to farm and add oracles
+# looping through dictionary and calling contract functions to add tokens to farm and add oracle
 def add_allowed_tokens(token_farm, dict_of_allowed_tokens, account):
     for token in dict_of_allowed_tokens:
         add_tx = token_farm.addAllowedTokens(token.address, {"from": account})
